@@ -14,4 +14,4 @@ GET        /webjars/*file        controllers.WebJarAssets.at(file)
 #POST        /user/:email/:password/:type    controllers.Application()
 
 GET        /user/:email          controllers.Application.getUser(email: String)
-POST       /user/                controllers.Application.createUser()
+POST       /user                 controllers.Application.createUser()

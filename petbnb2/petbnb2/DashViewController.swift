@@ -9,6 +9,16 @@
 import UIKit
 
 class DashViewController: UIViewController {
+    
+    
+    @IBOutlet weak var accountEmail: UITextField!
+    
+    @IBOutlet weak var accountPassword: UITextField!
+    
+    @IBOutlet weak var accountTypeGuest: UISwitch!
+    
+    @IBOutlet weak var accountTypeHost: UISwitch!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

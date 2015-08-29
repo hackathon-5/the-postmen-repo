@@ -23,4 +23,44 @@ public class AppUser extends Model {
     public String password;
 
     public String userType;
+
+    public static Finder<Long, AppUser> getFind() {
+        return find;
+    }
+
+    public static void setFind(Finder<Long, AppUser> find) {
+        AppUser.find = find;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
 }

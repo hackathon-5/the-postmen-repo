@@ -16,4 +16,15 @@ class checkoutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    @IBAction func confirmBtn(sender: AnyObject) {
+        
+        performSegueWithIdentifier("datePickerToCheckoutSegue", sender: self)
+        
+    }
+    
+    
+    
+    
+    
 }

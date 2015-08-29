@@ -60,10 +60,10 @@ public class Application extends Controller {
 
         try {
             Ebean.save(user);
-            retVal = "ERROR";
+            retVal = "SUCCESS";
         }
         catch(OptimisticLockException ole) {
-            retVal = "SUCCESS";
+            retVal = "ERROR";
         }
 
         return ok(retVal);

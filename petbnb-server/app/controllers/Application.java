@@ -49,7 +49,7 @@ public class Application extends Controller {
         String retVal;
 
         JsonNode json = request().body().asJson();
-        String email = json.get("email").textValue();
+        String email = json.get("username").textValue();
         String password = json.get("password").textValue();
         String type = json.get("userType").textValue();
 

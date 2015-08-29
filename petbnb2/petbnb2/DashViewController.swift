@@ -23,6 +23,14 @@ class DashViewController: UIViewController {
     override func viewDidLoad() {
         formNotFilledLable.text = ""
         super.viewDidLoad()
+//        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+//
+//        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+//
+//        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
 
         // Do any additional setup after loading the view.
     }
@@ -38,10 +46,18 @@ class DashViewController: UIViewController {
             } else {
                 userType = "host"
             }
-            API().createUser(accountEmail.text, password: accountPassword.text, userType: userType){ (error : NSError!) in
+            API().createUser(accountEmail.text, password: accountPassword.text, userType: userType){ (responseString: String!, error : NSError!) in
+                print(responseString)
                 if error != nil{
                     print(error.localizedFailureReason)
                 }
+
+
+            }
+            if userType == "guest"{
+                self.performSegueWithIdentifier("createToLandingSegue", sender: self)
+            } else {
+                self.performSegueWithIdentifier("createToHostListingSegue", sender: self)
             }
         }
 
@@ -49,6 +65,15 @@ class DashViewController: UIViewController {
 
     
     
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+//        if (sender.direction == .Left) {
+        
+//        }
+        
+        if (sender.direction == .Right) {
+          self.performSegueWithIdentifier("createToLoginSegue", sender: self)  
+        }
+    }
     
     
     

@@ -7,15 +7,34 @@
 //
 
 import UIKit
-# import Alamofire
+
 
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtUsername: UITextField!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    @IBOutlet weak var infobar: UITextField!
+    
+    @IBOutlet weak var Label: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    @IBAction func btnLogin(sender: AnyObject) {
+        
+        infobar.text = "Logged In!!"
+        
+    }
+    
+    
 
 }
 

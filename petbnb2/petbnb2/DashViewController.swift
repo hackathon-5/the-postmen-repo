@@ -8,6 +8,7 @@
 
 import UIKit
 
+//This is the create user page
 class DashViewController: UIViewController {
     
     
@@ -15,12 +16,12 @@ class DashViewController: UIViewController {
     
     @IBOutlet weak var accountPassword: UITextField!
     
-    @IBOutlet weak var accountTypeGuest: UISwitch!
-    
-    @IBOutlet weak var accountTypeHost: UISwitch!
-    
+    @IBOutlet weak var formNotFilledLable: UILabel!
 
+    @IBOutlet weak var accountTypeSwitch: UISwitch!
+    
     override func viewDidLoad() {
+        formNotFilledLable.text = ""
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -28,10 +29,22 @@ class DashViewController: UIViewController {
 
     
     @IBAction func signUpBtn(sender: AnyObject) {
-        
-        
-        //Merric put code here :D
-        
+        if accountEmail.text == "" || accountPassword.text == "" {
+            self.formNotFilledLable.text = "Please fill out username and password."
+        } else {
+            var userType : String!
+            if accountTypeSwitch.on {
+                userType = "guest"
+            } else {
+                userType = "host"
+            }
+            API().createUser(accountEmail.text, password: accountPassword.text, userType: userType){ (error : NSError!) in
+                if error != nil{
+                    print(error.localizedFailureReason)
+                }
+            }
+        }
+
     }
 
     

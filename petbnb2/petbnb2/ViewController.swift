@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-
+//This is the login page
 class ViewController: UIViewController {
     
     
@@ -19,36 +19,37 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infobar: UITextField!
     
-    @IBOutlet weak var failedLoginTextLabel: UILabel!
-    
     @IBOutlet weak var createAccount: UIButton!
 
+    @IBOutlet weak var failedLoginTextLabel: UILabel!
+    
     override func viewDidLoad() {
+        failedLoginTextLabel.text = ""
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBAction func btnCreateAccount(sender: AnyObject) {
-        API().createUser("userName", password: "passWord", userType: "guest"){ (error : NSError!) in
-            if error != nil{
-                print(error.localizedFailureReason)
-            }
-            }
         performSegueWithIdentifier("createAccountSegue", sender: self)
     }
     
     @IBAction func btnLogin(sender: AnyObject) {
         let userName = txtUsername.text
         let password = txtPassword.text
-        API().getUserType("user", password: password) { (userType: String!) in  //returns userType to use
-            if userType != "guest" && userType != "host"{
-                self.failedLoginTextLabel.text = "Wrong Username and/or Password. Please try again."
-            } else if userType == "guest"{
-                self.infobar.text = "Logged In!!"
-                self.performSegueWithIdentifier("landingPageSegue", sender: self)
-            } else {
-                self.infobar.text = "Logged In!!"
-                self.performSegueWithIdentifier("hostListingFromLoginSegue", sender: self)
+        if userName == "" || password == ""{
+            failedLoginTextLabel.text = "PLEASE SUPPLY USERNAME AND PASSWORD!"
+        } else {
+            
+            API().getUserType(userName, password: password) { (userType: String!) in  //returns userType to use
+                if userType != "guest" && userType != "host"{
+                    self.failedLoginTextLabel.text = "Wrong Username and/or Password. Please try again."
+                } else if userType == "guest"{
+                    self.infobar.text = "Logged In!!"
+                    self.performSegueWithIdentifier("landingPageSegue", sender: self)
+                } else {
+                    self.infobar.text = "Logged In!!"
+                    self.performSegueWithIdentifier("hostListingFromLoginSegue", sender: self)
+                }
             }
         }
                 

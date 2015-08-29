@@ -59,7 +59,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-TD-8DI">
                                 <rect key="frame" x="421" y="169" width="95" height="96"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFl-QI-kup">
@@ -137,9 +137,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abz-Dx-Q8C" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="45" y="251" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="246" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -161,6 +161,7 @@
                     </view>
                     <connections>
                         <outlet property="createAccount" destination="4qh-7A-ubo" id="SdI-a8-ULI"/>
+                        <outlet property="failedLoginTextLabel" destination="Abz-Dx-Q8C" id="ELc-Xw-FTL"/>
                         <outlet property="infobar" destination="man-2g-oMD" id="0mu-NH-pwL"/>
                         <outlet property="txtPassword" destination="gcg-2x-U9F" id="jtq-mJ-BgF"/>
                         <outlet property="txtUsername" destination="gKM-N1-evZ" id="MEy-bx-u7b"/>
@@ -248,21 +249,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-dp-HTb">
                                 <rect key="frame" x="276" y="281" width="51" height="31"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O7s-6k-0dB">
-                                <rect key="frame" x="276" y="371" width="51" height="31"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiN-gA-jsG">
-                                <rect key="frame" x="16" y="252" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Host" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1F-Sc-wpN">
-                                <rect key="frame" x="16" y="342" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-mN-eJ5">
                                 <rect key="frame" x="268" y="488" width="64" height="30"/>
                                 <state key="normal" title="Sign Up">
@@ -272,6 +258,24 @@
                                     <action selector="signUpBtn:" destination="EOb-87-jpq" eventType="touchUpInside" id="sbz-DB-ddh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-h1-CNn" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="57" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Host" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1F-Sc-wpN">
+                                <rect key="frame" x="16" y="289" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiN-gA-jsG">
+                                <rect key="frame" x="357" y="289" width="294" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -279,7 +283,6 @@
                             <constraint firstItem="cq4-Te-g89" firstAttribute="trailing" secondItem="rRy-Ox-ixf" secondAttribute="trailingMargin" id="E6g-ml-rd4"/>
                             <constraint firstItem="Oyh-XM-dAW" firstAttribute="trailing" secondItem="rRy-Ox-ixf" secondAttribute="trailingMargin" id="TNU-Ao-qIR"/>
                             <constraint firstItem="NiN-gA-jsG" firstAttribute="leading" secondItem="rRy-Ox-ixf" secondAttribute="leadingMargin" id="cF0-oZ-OBx"/>
-                            <constraint firstAttribute="centerX" secondItem="O7s-6k-0dB" secondAttribute="centerX" id="fgP-4n-SEE"/>
                             <constraint firstItem="cq4-Te-g89" firstAttribute="leading" secondItem="rRy-Ox-ixf" secondAttribute="leadingMargin" id="jOk-2K-tzD"/>
                             <constraint firstItem="M1F-Sc-wpN" firstAttribute="trailing" secondItem="rRy-Ox-ixf" secondAttribute="trailingMargin" id="ksR-mV-Tmh"/>
                             <constraint firstItem="XYa-i5-bkX" firstAttribute="leading" secondItem="rRy-Ox-ixf" secondAttribute="leadingMargin" id="mhv-Ik-OXr"/>
@@ -293,8 +296,8 @@
                     <connections>
                         <outlet property="accountEmail" destination="cq4-Te-g89" id="Zuk-1m-SSQ"/>
                         <outlet property="accountPassword" destination="XYa-i5-bkX" id="S2M-1R-VFA"/>
-                        <outlet property="accountTypeGuest" destination="Cdq-dp-HTb" id="qud-7l-bA7"/>
-                        <outlet property="accountTypeHost" destination="O7s-6k-0dB" id="fvh-me-ISc"/>
+                        <outlet property="accountTypeSwitch" destination="Cdq-dp-HTb" id="PUm-GL-enf"/>
+                        <outlet property="formNotFilledLable" destination="fiq-h1-CNn" id="4eG-Hq-EKd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GoA-gK-tLF" userLabel="First Responder" sceneMemberID="firstResponder"/>

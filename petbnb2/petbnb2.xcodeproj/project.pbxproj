@@ -13,6 +13,7 @@
 		8501110D1B915AF3006448EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8501110C1B915AF3006448EF /* Images.xcassets */; };
 		850111101B915AF3006448EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8501110E1B915AF3006448EF /* LaunchScreen.xib */; };
 		8501111C1B915AF3006448EF /* petbnb2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501111B1B915AF3006448EF /* petbnb2Tests.swift */; };
+		850111281B915E92006448EF /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850111271B915E92006448EF /* DashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		850111151B915AF3006448EF /* petbnb2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petbnb2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8501111A1B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8501111B1B915AF3006448EF /* petbnb2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petbnb2Tests.swift; sourceTree = "<group>"; };
+		850111271B915E92006448EF /* DashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				850111051B915AF3006448EF /* AppDelegate.swift */,
 				850111071B915AF3006448EF /* ViewController.swift */,
+				850111271B915E92006448EF /* DashViewController.swift */,
 				850111091B915AF3006448EF /* Main.storyboard */,
 				8501110C1B915AF3006448EF /* Images.xcassets */,
 				8501110E1B915AF3006448EF /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				850111081B915AF3006448EF /* ViewController.swift in Sources */,
+				850111281B915E92006448EF /* DashViewController.swift in Sources */,
 				850111061B915AF3006448EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

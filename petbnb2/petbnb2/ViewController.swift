@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infobar: UITextField!
     
-    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var failedLoginTextLabel: UILabel!
     
     @IBOutlet weak var createAccount: UIButton!
 
@@ -29,23 +29,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnCreateAccount(sender: AnyObject) {
-    
+        API().createUser("userName", password: "passWord", userType: "guest"){ (error : NSError!) in
+            if error != nil{
+                print(error.localizedFailureReason)
+            }
+            }
         performSegueWithIdentifier("createAccountSegue", sender: self)
     }
     
     @IBAction func btnLogin(sender: AnyObject) {
-        
-        
         let userName = txtUsername.text
         let password = txtPassword.text
         API().getUserType("user", password: password) { (userType: String!) in  //returns userType to use
-//            Let vc = self.storyboard.instantiateViewControllerWithIdentifier("billInfo") as BillInfoViewController
-//            self.presentViewController(vc, animated: true, completion: nil)
-            print("/n/n/n" + userType)
-            self.infobar.text = "Logged In!!"
-            
-            self.performSegueWithIdentifier("landingPageSegue", sender: self)
-
+            if userType != "guest" && userType != "host"{
+                self.failedLoginTextLabel.text = "Wrong Username and/or Password. Please try again."
+            } else if userType == "guest"{
+                self.infobar.text = "Logged In!!"
+                self.performSegueWithIdentifier("landingPageSegue", sender: self)
+            } else {
+                self.infobar.text = "Logged In!!"
+                self.performSegueWithIdentifier("hostListingFromLoginSegue", sender: self)
+            }
         }
                 
     }

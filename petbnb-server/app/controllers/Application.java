@@ -1,10 +1,12 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.fasterxml.jackson.databind.JsonNode;
 import models.AppUser;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import javax.persistence.OptimisticLockException;
 import java.util.Date;
 
 public class Application extends Controller {
@@ -41,6 +43,30 @@ public class Application extends Controller {
         else {
             return ok("");
         }
+    }
+
+    public static Result createUser() {
+        String retVal;
+
+        JsonNode json = request().body().asJson();
+        String email = json.get("email").textValue();
+        String password = json.get("password").textValue();
+        String type = json.get("userType").textValue();
+
+        AppUser user = new AppUser();
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setUserType(type);
+
+        try {
+            Ebean.save(user);
+            retVal = "ERROR";
+        }
+        catch(OptimisticLockException ole) {
+            retVal = "SUCCESS";
+        }
+
+        return ok(retVal);
     }
 
 }

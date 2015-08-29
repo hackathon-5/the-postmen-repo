@@ -21,6 +21,7 @@
 		85CEBB371B91977F001ED96A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB361B91977F001ED96A /* LandingViewController.swift */; };
 		85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB381B919ABD001ED96A /* hostListingViewController.swift */; };
 		85CEBB3B1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */; };
+		85CEBB3F1B91E882001ED96A /* lady.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB3E1B91E882001ED96A /* lady.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		85CEBB361B91977F001ED96A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ../LandingViewController.swift; sourceTree = "<group>"; };
 		85CEBB381B919ABD001ED96A /* hostListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hostListingViewController.swift; sourceTree = "<group>"; };
 		85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "large-backyard-lawn-landscaping-network_9459.jpg"; path = "petbnb2/large-backyard-lawn-landscaping-network_9459.jpg"; sourceTree = "<group>"; };
+		85CEBB3E1B91E882001ED96A /* lady.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lady.jpeg; path = petbnb2/lady.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				85CEBB311B918AD6001ED96A /* Drawing.png */,
 				85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */,
+				85CEBB3E1B91E882001ED96A /* lady.jpeg */,
 				55D4C1A41B91804C0071E171 /* Alamofire.xcodeproj */,
 				850111021B915AF3006448EF /* petbnb2 */,
 				850111181B915AF3006448EF /* petbnb2Tests */,
@@ -327,6 +330,7 @@
 				85CEBB321B918AD6001ED96A /* Drawing.png in Resources */,
 				8501110D1B915AF3006448EF /* Images.xcassets in Resources */,
 				85CEBB3B1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg in Resources */,
+				85CEBB3F1B91E882001ED96A /* lady.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

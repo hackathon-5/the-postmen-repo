@@ -35,7 +35,7 @@ public class Application extends Controller {
 //                                    .eq("email", email).findUnique();
         AppUser user = Ebean.find(AppUser.class).where().ilike("email", "%"+email+"%").findUnique();
 
-        if((user != null) && (user.getUserType() == null)) {
+        if((user != null) && (user.getUserType() != null)) {
             return ok(user.getUserType());
         }
         else {

@@ -390,6 +390,7 @@
                         <outlet property="formNotFilledLable" destination="fiq-h1-CNn" id="4eG-Hq-EKd"/>
                         <segue destination="LqP-xe-Y1n" kind="show" identifier="createToLandingSegue" id="q2G-7c-bhJ"/>
                         <segue destination="yjx-71-NDA" kind="show" identifier="createToHostListingSegue" id="HCz-x6-rUZ"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="createToLoginSegue" id="eMs-wp-451"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GoA-gK-tLF" userLabel="First Responder" sceneMemberID="firstResponder"/>

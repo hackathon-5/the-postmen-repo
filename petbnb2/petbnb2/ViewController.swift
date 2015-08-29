@@ -35,10 +35,19 @@ class ViewController: UIViewController {
     
     @IBAction func btnLogin(sender: AnyObject) {
         
-        infobar.text = "Logged In!!"
         
-        performSegueWithIdentifier("landingPageSegue", sender: self)
-        
+        let userName = txtUsername.text
+        let password = txtPassword.text
+        API().getUserType("user", password: password) { (userType: String!) in  //returns userType to use
+//            Let vc = self.storyboard.instantiateViewControllerWithIdentifier("billInfo") as BillInfoViewController
+//            self.presentViewController(vc, animated: true, completion: nil)
+            print("/n/n/n" + userType)
+            self.infobar.text = "Logged In!!"
+            
+            self.performSegueWithIdentifier("landingPageSegue", sender: self)
+
+        }
+                
     }
     
 }

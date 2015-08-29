@@ -18,7 +18,7 @@ class API {
         }
     }
     
-    func createUser(username: String, password: String, userType: String, completionHandler:(NSError!) ->()) -> (){
+    func createUser(username: String, password: String, userType: String, completionHandler:(String!, NSError!) ->()) -> (){
         let parameters = [
             "username" : username,
             "password" : password,
@@ -26,7 +26,7 @@ class API {
         ]
         Alamofire.request(.POST, "http://52.21.208.5:9000/user", parameters: parameters, encoding: .JSON)
             .responseString { request, response, data, error in
-                completionHandler(error)
+                completionHandler(data, error)
         }
     }
 }

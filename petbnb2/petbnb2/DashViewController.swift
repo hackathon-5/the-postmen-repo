@@ -27,5 +27,17 @@ class DashViewController: UIViewController {
     }
 
     
+    @IBAction func signUpBtn(sender: AnyObject) {
+        
+        
+        //Merric put code here :D
+        
+    }
 
+    
+    
+    
+    
+    
+    
 }

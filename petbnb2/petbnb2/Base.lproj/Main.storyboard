@@ -32,6 +32,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZJe-7F-D1w"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please enter your login information " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="man-2g-oMD">
                                 <rect key="frame" x="16" y="322" width="568" height="30"/>
@@ -53,9 +56,15 @@
                             <constraint firstItem="gcg-2x-U9F" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="s99-um-YwW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infobar" destination="man-2g-oMD" id="0mu-NH-pwL"/>
+                        <outlet property="txtPassword" destination="gcg-2x-U9F" id="jtq-mJ-BgF"/>
+                        <outlet property="txtUsername" destination="gKM-N1-evZ" id="MEy-bx-u7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="272" y="315"/>
         </scene>
         <!--Dash View Controller-->
         <scene sceneID="Wbr-ry-F24">

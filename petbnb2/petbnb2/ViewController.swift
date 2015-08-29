@@ -7,21 +7,51 @@
 //
 
 import UIKit
-# import Alamofire
+import Alamofire
 
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtUsername: UITextField!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    @IBOutlet weak var infobar: UITextField!
+    
+    @IBOutlet weak var Label: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func btnLogin(sender: AnyObject) {
+        
+        infobar.text = "Logged In!!"
+        
+        var url : String = "http://demo.revivalx.com/todolist-api/login.php"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+            
+            if (jsonResult != nil) {
+                println(jsonResult)
+            } else {
+                // couldn't load JSON, look at error
+            }
+            
+        })
+        
     }
-
+    
+    
 
 }
 

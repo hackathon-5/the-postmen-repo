@@ -1,6 +1,6 @@
 //
-//  petbnbTests.swift
-//  petbnbTests
+//  petbnb2Tests.swift
+//  petbnb2Tests
 //
 //  Created by Ryan Conklin on 8/28/15.
 //  Copyright (c) 2015 postmen. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class petbnbTests: XCTestCase {
+class petbnb2Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

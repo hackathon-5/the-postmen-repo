@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  petbnb
+//  petbnb2
 //
 //  Created by Ryan Conklin on 8/28/15.
 //  Copyright (c) 2015 postmen. All rights reserved.
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        println("WHAT UP THIS BE Petbnb")
+        println("HELLO WORLD AGAIN WTF")
         return true
     }
 

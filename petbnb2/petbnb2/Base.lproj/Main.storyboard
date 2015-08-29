@@ -53,11 +53,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKM-N1-evZ">
-                                <rect key="frame" x="16" y="280" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-2x-U9F">
                                 <rect key="frame" x="16" y="355" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -89,6 +84,11 @@
                                     <action selector="btnCreateAccount:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CCO-x6-PJL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKM-N1-evZ">
+                                <rect key="frame" x="16" y="280" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,6 +113,7 @@
                         <outlet property="txtUsername" destination="gKM-N1-evZ" id="MEy-bx-u7b"/>
                         <segue destination="EOb-87-jpq" kind="show" identifier="createAccountSegue" id="Jif-Br-mm2"/>
                         <segue destination="LqP-xe-Y1n" kind="show" identifier="landingPageSegue" id="LKK-Gu-mJF"/>
+                        <segue destination="yjx-71-NDA" kind="show" identifier="hostListingFromLoginSegue" id="bW9-I8-sjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -183,6 +184,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-dp-HTb">
+                                <rect key="frame" x="276" y="281" width="51" height="31"/>
+                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O7s-6k-0dB">
                                 <rect key="frame" x="276" y="371" width="51" height="31"/>
                             </switch>
@@ -198,9 +202,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-dp-HTb">
-                                <rect key="frame" x="276" y="281" width="51" height="31"/>
-                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-mN-eJ5">
+                                <rect key="frame" x="268" y="488" width="64" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -215,6 +222,7 @@
                             <constraint firstItem="Oyh-XM-dAW" firstAttribute="leading" secondItem="rRy-Ox-ixf" secondAttribute="leadingMargin" id="nIx-UO-3ju"/>
                             <constraint firstItem="M1F-Sc-wpN" firstAttribute="leading" secondItem="rRy-Ox-ixf" secondAttribute="leadingMargin" id="rXs-E8-1el"/>
                             <constraint firstItem="NiN-gA-jsG" firstAttribute="trailing" secondItem="rRy-Ox-ixf" secondAttribute="trailingMargin" id="uyC-9K-Qlb"/>
+                            <constraint firstAttribute="centerX" secondItem="Ofx-mN-eJ5" secondAttribute="centerX" id="xcY-sc-Xyj"/>
                             <constraint firstItem="XYa-i5-bkX" firstAttribute="trailing" secondItem="rRy-Ox-ixf" secondAttribute="trailingMargin" id="xcg-KK-zcr"/>
                         </constraints>
                     </view>

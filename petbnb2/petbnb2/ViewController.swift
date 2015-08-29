@@ -32,6 +32,23 @@ class ViewController: UIViewController {
         
         infobar.text = "Logged In!!"
         
+        var url : String = "http://demo.revivalx.com/todolist-api/login.php"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+            
+            if (jsonResult != nil) {
+                println(jsonResult)
+            } else {
+                // couldn't load JSON, look at error
+            }
+            
+        })
+        
     }
     
     

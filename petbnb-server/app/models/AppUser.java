@@ -24,14 +24,6 @@ public class AppUser extends Model {
 
     public String userType;
 
-    public static Finder<Long, AppUser> getFind() {
-        return find;
-    }
-
-    public static void setFind(Finder<Long, AppUser> find) {
-        AppUser.find = find;
-    }
-
     public Long getId() {
         return id;
     }

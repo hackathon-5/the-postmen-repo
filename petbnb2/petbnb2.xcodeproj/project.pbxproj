@@ -22,6 +22,7 @@
 		85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB381B919ABD001ED96A /* hostListingViewController.swift */; };
 		85CEBB3B1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */; };
 		85CEBB3F1B91E882001ED96A /* lady.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB3E1B91E882001ED96A /* lady.jpeg */; };
+		85CEBB441B91FEDF001ED96A /* checkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB431B91FEDF001ED96A /* checkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		85CEBB381B919ABD001ED96A /* hostListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hostListingViewController.swift; sourceTree = "<group>"; };
 		85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "large-backyard-lawn-landscaping-network_9459.jpg"; path = "petbnb2/large-backyard-lawn-landscaping-network_9459.jpg"; sourceTree = "<group>"; };
 		85CEBB3E1B91E882001ED96A /* lady.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lady.jpeg; path = petbnb2/lady.jpeg; sourceTree = "<group>"; };
+		85CEBB431B91FEDF001ED96A /* checkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				85CEBB381B919ABD001ED96A /* hostListingViewController.swift */,
 				850111271B915E92006448EF /* DashViewController.swift */,
 				850111091B915AF3006448EF /* Main.storyboard */,
+				85CEBB431B91FEDF001ED96A /* checkoutViewController.swift */,
 				8501110C1B915AF3006448EF /* Images.xcassets */,
 				8501110E1B915AF3006448EF /* LaunchScreen.xib */,
 				850111031B915AF3006448EF /* Supporting Files */,
@@ -353,6 +356,7 @@
 				85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */,
 				850111281B915E92006448EF /* DashViewController.swift in Sources */,
 				85CEBB371B91977F001ED96A /* LandingViewController.swift in Sources */,
+				85CEBB441B91FEDF001ED96A /* checkoutViewController.swift in Sources */,
 				850111061B915AF3006448EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

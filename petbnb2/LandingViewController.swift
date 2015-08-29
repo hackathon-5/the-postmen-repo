@@ -15,6 +15,18 @@ class LandingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
+    @IBAction func viewListingBtn(sender: AnyObject) {
+        
+        performSegueWithIdentifier("viewListingBtnSegue", sender: self)
+        
+    }
+    
+    
+    
 
 
 }

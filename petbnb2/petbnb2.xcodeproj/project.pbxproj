@@ -16,6 +16,10 @@
 		850111101B915AF3006448EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8501110E1B915AF3006448EF /* LaunchScreen.xib */; };
 		8501111C1B915AF3006448EF /* petbnb2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501111B1B915AF3006448EF /* petbnb2Tests.swift */; };
 		850111281B915E92006448EF /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850111271B915E92006448EF /* DashViewController.swift */; };
+		85CEBB321B918AD6001ED96A /* Drawing.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB311B918AD6001ED96A /* Drawing.png */; };
+		85CEBB371B91977F001ED96A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB361B91977F001ED96A /* LandingViewController.swift */; };
+		85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CEBB381B919ABD001ED96A /* hostListingViewController.swift */; };
+		85CEBB3B1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F74A33FA6BFD1FB8BBDF8E0 /* Pods-petbnb2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petbnb2.release.xcconfig"; path = "Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2.release.xcconfig"; sourceTree = "<group>"; };
 		55D4C1A41B91804C0071E171 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		6896A4F2700076ECC9204EB8 /* Pods-petbnb2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petbnb2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2.debug.xcconfig"; sourceTree = "<group>"; };
 		850111001B915AF3006448EF /* petbnb2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petbnb2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850111041B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850111051B915AF3006448EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,10 @@
 		8501111A1B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8501111B1B915AF3006448EF /* petbnb2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petbnb2Tests.swift; sourceTree = "<group>"; };
 		850111271B915E92006448EF /* DashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		85CEBB311B918AD6001ED96A /* Drawing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drawing.png; sourceTree = "<group>"; };
+		85CEBB361B91977F001ED96A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingViewController.swift; path = ../LandingViewController.swift; sourceTree = "<group>"; };
+		85CEBB381B919ABD001ED96A /* hostListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hostListingViewController.swift; sourceTree = "<group>"; };
+		85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "large-backyard-lawn-landscaping-network_9459.jpg"; path = "petbnb2/large-backyard-lawn-landscaping-network_9459.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,16 +126,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-
-		2DF5512687A48C533A2F2D81 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6896A4F2700076ECC9204EB8 /* Pods-petbnb2.debug.xcconfig */,
-				2F74A33FA6BFD1FB8BBDF8E0 /* Pods-petbnb2.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		55D4C1A51B91804C0071E171 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +140,8 @@
 		850110F71B915AF3006448EF = {
 			isa = PBXGroup;
 			children = (
+				85CEBB311B918AD6001ED96A /* Drawing.png */,
+				85CEBB3A1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg */,
 				55D4C1A41B91804C0071E171 /* Alamofire.xcodeproj */,
 				850111021B915AF3006448EF /* petbnb2 */,
 				850111181B915AF3006448EF /* petbnb2Tests */,
@@ -166,6 +164,8 @@
 			children = (
 				850111051B915AF3006448EF /* AppDelegate.swift */,
 				850111071B915AF3006448EF /* ViewController.swift */,
+				85CEBB361B91977F001ED96A /* LandingViewController.swift */,
+				85CEBB381B919ABD001ED96A /* hostListingViewController.swift */,
 				850111271B915E92006448EF /* DashViewController.swift */,
 				850111091B915AF3006448EF /* Main.storyboard */,
 				8501110C1B915AF3006448EF /* Images.xcassets */,
@@ -210,7 +210,6 @@
 				850110FC1B915AF3006448EF /* Sources */,
 				850110FD1B915AF3006448EF /* Frameworks */,
 				850110FE1B915AF3006448EF /* Resources */,
-
 				55D4C1B71B91806B0071E171 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -322,7 +321,9 @@
 			files = (
 				8501110B1B915AF3006448EF /* Main.storyboard in Resources */,
 				850111101B915AF3006448EF /* LaunchScreen.xib in Resources */,
+				85CEBB321B918AD6001ED96A /* Drawing.png in Resources */,
 				8501110D1B915AF3006448EF /* Images.xcassets in Resources */,
+				85CEBB3B1B91A5EA001ED96A /* large-backyard-lawn-landscaping-network_9459.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				850111081B915AF3006448EF /* ViewController.swift in Sources */,
+				85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */,
 				850111281B915E92006448EF /* DashViewController.swift in Sources */,
+				85CEBB371B91977F001ED96A /* LandingViewController.swift in Sources */,
 				850111061B915AF3006448EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

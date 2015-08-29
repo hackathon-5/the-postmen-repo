@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		55D4C1B31B91806B0071E171 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4C1AC1B91804C0071E171 /* Alamofire.framework */; };
 		55D4C1B41B91806B0071E171 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4C1AC1B91804C0071E171 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		55D4C1BA1B9186F30071E171 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C1B91B9186F30071E171 /* DataController.swift */; };
+		55D4C1C61B91E0760071E171 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C1C51B91E0760071E171 /* API.swift */; };
 		850111061B915AF3006448EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850111051B915AF3006448EF /* AppDelegate.swift */; };
 		850111081B915AF3006448EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850111071B915AF3006448EF /* ViewController.swift */; };
 		8501110B1B915AF3006448EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850111091B915AF3006448EF /* Main.storyboard */; };
@@ -84,7 +84,7 @@
 
 /* Begin PBXFileReference section */
 		55D4C1A41B91804C0071E171 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		55D4C1B91B9186F30071E171 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		55D4C1C51B91E0760071E171 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		850111001B915AF3006448EF /* petbnb2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petbnb2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850111041B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850111051B915AF3006448EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +164,7 @@
 		850111021B915AF3006448EF /* petbnb2 */ = {
 			isa = PBXGroup;
 			children = (
+				55D4C1C51B91E0760071E171 /* API.swift */,
 				850111051B915AF3006448EF /* AppDelegate.swift */,
 				850111071B915AF3006448EF /* ViewController.swift */,
 				85CEBB361B91977F001ED96A /* LandingViewController.swift */,
@@ -173,7 +174,6 @@
 				8501110C1B915AF3006448EF /* Images.xcassets */,
 				8501110E1B915AF3006448EF /* LaunchScreen.xib */,
 				850111031B915AF3006448EF /* Supporting Files */,
-				55D4C1B91B9186F30071E171 /* DataController.swift */,
 			);
 			path = petbnb2;
 			sourceTree = "<group>";
@@ -344,9 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D4C1C61B91E0760071E171 /* API.swift in Sources */,
 				850111081B915AF3006448EF /* ViewController.swift in Sources */,
 				85CEBB391B919ABD001ED96A /* hostListingViewController.swift in Sources */,
-				55D4C1BA1B9186F30071E171 /* DataController.swift in Sources */,
 				850111281B915E92006448EF /* DashViewController.swift in Sources */,
 				85CEBB371B91977F001ED96A /* LandingViewController.swift in Sources */,
 				850111061B915AF3006448EF /* AppDelegate.swift in Sources */,

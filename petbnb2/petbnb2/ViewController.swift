@@ -21,37 +21,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Label: UILabel!
     
+    @IBOutlet weak var createAccount: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func btnCreateAccount(sender: AnyObject) {
+    
+        performSegueWithIdentifier("createAccountSegue", sender: self)
+    }
     
     @IBAction func btnLogin(sender: AnyObject) {
         
-        infobar.text = "Logged In!!"
         
-        var url : String = "http://demo.revivalx.com/todolist-api/login.php"
-        var request : NSMutableURLRequest = NSMutableURLRequest()
-        request.URL = NSURL(string: url)
-        request.HTTPMethod = "GET"
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+        let userName = txtUsername.text
+        let password = txtPassword.text
+        API().getUserType("user", password: password) { (userType: String!) in  //returns userType to use
+//            Let vc = self.storyboard.instantiateViewControllerWithIdentifier("billInfo") as BillInfoViewController
+//            self.presentViewController(vc, animated: true, completion: nil)
+            print("/n/n/n" + userType)
+            self.infobar.text = "Logged In!!"
             
-            if (jsonResult != nil) {
-                println(jsonResult)
-            } else {
-                // couldn't load JSON, look at error
-            }
-            
-        })
-        
+            self.performSegueWithIdentifier("landingPageSegue", sender: self)
+
+        }
+                
     }
     
-    
-
 }
 

@@ -1,5 +1,5 @@
 //
-//  LandingViewController.swift
+//  checkoutViewController.swift
 //  petbnb2
 //
 //  Created by Ryan Conklin on 8/29/15.
@@ -8,25 +8,23 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class checkoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
     
-    
-    
-    
-    @IBAction func viewListingBtn(sender: AnyObject) {
+    @IBAction func confirmBtn(sender: AnyObject) {
         
-        performSegueWithIdentifier("viewListingBtnSegue", sender: self)
+        performSegueWithIdentifier("datePickerToCheckoutSegue", sender: self)
         
     }
     
     
     
-
-
+    
+    
 }

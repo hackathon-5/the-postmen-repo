@@ -22,4 +22,25 @@ public class Application extends Controller {
         return ok("WE ARE THREE HANDSOME GENTLEMEN");
     }
 
+//    public static Result createUser(String email, String password) {
+//        AppUser user = new AppUser();
+//        user.setEmail(email);
+//        user.setPassword(password);
+//        user.setUserType(type);
+//        Ebean.save(user);
+//    }
+
+    public static Result getUser(String email) {
+//        AppUser user = AppUser.find.where()
+//                                    .eq("email", email).findUnique();
+        AppUser user = Ebean.find(AppUser.class).where().ilike("email", "%"+email+"%").findUnique();
+
+        if((user != null) && (user.getUserType() == null)) {
+            return ok(user.getUserType());
+        }
+        else {
+            return ok("");
+        }
+    }
+
 }

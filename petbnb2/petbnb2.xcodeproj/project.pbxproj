@@ -14,6 +14,7 @@
 		850111101B915AF3006448EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8501110E1B915AF3006448EF /* LaunchScreen.xib */; };
 		8501111C1B915AF3006448EF /* petbnb2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8501111B1B915AF3006448EF /* petbnb2Tests.swift */; };
 		850111281B915E92006448EF /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850111271B915E92006448EF /* DashViewController.swift */; };
+		A2AC499D6B3CA6A828874B7B /* Pods_petbnb2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC77E6725C28FF28E9744B /* Pods_petbnb2.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F74A33FA6BFD1FB8BBDF8E0 /* Pods-petbnb2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petbnb2.release.xcconfig"; path = "Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2.release.xcconfig"; sourceTree = "<group>"; };
+		6896A4F2700076ECC9204EB8 /* Pods-petbnb2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petbnb2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2.debug.xcconfig"; sourceTree = "<group>"; };
 		850111001B915AF3006448EF /* petbnb2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petbnb2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850111041B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850111051B915AF3006448EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		8501111A1B915AF3006448EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8501111B1B915AF3006448EF /* petbnb2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petbnb2Tests.swift; sourceTree = "<group>"; };
 		850111271B915E92006448EF /* DashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		D0DC77E6725C28FF28E9744B /* Pods_petbnb2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petbnb2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AC499D6B3CA6A828874B7B /* Pods_petbnb2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20DF3B2188A129F35A06DA3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC77E6725C28FF28E9744B /* Pods_petbnb2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DF5512687A48C533A2F2D81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6896A4F2700076ECC9204EB8 /* Pods-petbnb2.debug.xcconfig */,
+				2F74A33FA6BFD1FB8BBDF8E0 /* Pods-petbnb2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		850110F71B915AF3006448EF = {
 			isa = PBXGroup;
 			children = (
 				850111021B915AF3006448EF /* petbnb2 */,
 				850111181B915AF3006448EF /* petbnb2Tests */,
 				850111011B915AF3006448EF /* Products */,
+				2DF5512687A48C533A2F2D81 /* Pods */,
+				20DF3B2188A129F35A06DA3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8501111F1B915AF3006448EF /* Build configuration list for PBXNativeTarget "petbnb2" */;
 			buildPhases = (
+				A6E8D364BF80D5770DC5C4D6 /* Check Pods Manifest.lock */,
 				850110FC1B915AF3006448EF /* Sources */,
 				850110FD1B915AF3006448EF /* Frameworks */,
 				850110FE1B915AF3006448EF /* Resources */,
+				99D177E397A92F28B48C0578 /* Embed Pods Frameworks */,
+				39ADF67E4E81B52D36C4EB5D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39ADF67E4E81B52D36C4EB5D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99D177E397A92F28B48C0578 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-petbnb2/Pods-petbnb2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E8D364BF80D5770DC5C4D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		850110FC1B915AF3006448EF /* Sources */ = {
@@ -342,6 +417,7 @@
 		};
 		850111201B915AF3006448EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6896A4F2700076ECC9204EB8 /* Pods-petbnb2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = petbnb2/Info.plist;
@@ -352,6 +428,7 @@
 		};
 		850111211B915AF3006448EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F74A33FA6BFD1FB8BBDF8E0 /* Pods-petbnb2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = petbnb2/Info.plist;
@@ -413,6 +490,7 @@
 				850111211B915AF3006448EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		850111221B915AF3006448EF /* Build configuration list for PBXNativeTarget "petbnb2Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +499,7 @@
 				850111241B915AF3006448EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
